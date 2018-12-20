@@ -1,3 +1,5 @@
+/* CompGen */
+
 const fs = require('fs');
 
 const reqLength = 4;
