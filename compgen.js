@@ -1,4 +1,4 @@
-/* CompGen */
+/* CompGen, by the Dabbing Coders */
 
 const fs = require('fs');
 
