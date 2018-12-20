@@ -76,7 +76,7 @@ Wed Dec 19 2018 11:05:33	voice           	cassette        	djembe          	Moog
 Understanding the script
 ------------------------
 
-The first thing to do is understand how the script works. The juicy bit is carried out in the **getRandomSubset(src,length) function:
+The first thing to do is understand how the script works. The juicy bit is carried out in the **getRandomSubset(src,length)** function:
 
 ```
 function getRandomSubset(src,length) {
