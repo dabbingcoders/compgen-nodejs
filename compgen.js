@@ -1,4 +1,4 @@
-/* CompGen, by the Dabbing Coders */
+/* CompGen, by the Dabbing Coders December 2018*/
 
 const fs = require('fs');
 
