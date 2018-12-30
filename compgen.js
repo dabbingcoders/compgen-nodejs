@@ -1,17 +1,23 @@
-/* CompGen, by the Dabbing Coders December 2018*/
+/* CompGen, by the Dabbing Coders December 2018 */
 
 const fs = require('fs');
 
-const reqLength = 4;
-
 const callback_func = function(err, contents) {
     let sourceList = contents.split("\n");
-    let resultList = getRandomSubset(sourceList,reqLength);
+    let resultList = getRandomSubset(sourceList,process.argv[3]);
     padElements(resultList,16);
     console.log(new Date().toString().slice(0,24)+"\t"+resultList.join("\t"))
 };
 
-fs.readFile('sources.txt', 'utf8', callback_func);
+function showUsage() { console.log("usage: node compgen.js [filepath] [# of choices required]") }
+
+if (process.argv[2] === undefined || process.argv[3] === undefined) { showUsage(); process.exit() }
+
+if (!fs.existsSync(process.argv[2])) { console.log("Error. File: "+process.argv[2]+" doesn't exist"); process.exit() }
+
+console.log("pants");
+
+fs.readFile(process.argv[2], 'utf8', callback_func);
 
 function getRandomSubset(src,length) {
     let result = [];
